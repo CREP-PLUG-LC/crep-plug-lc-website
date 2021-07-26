@@ -1,6 +1,7 @@
 function updateCirclePosition(){
     var circles = document.getElementsByClassName('outerCircle')
     
+    // six items
     var theta = [0, Math.PI / 3, (Math.PI * 2)/ 3, Math.PI, (Math.PI * 4) / 3, (Math.PI * 5) / 3]
     
     var screen = document.getElementById('screen')
