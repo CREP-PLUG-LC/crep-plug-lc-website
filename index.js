@@ -15,9 +15,6 @@ function updateCirclePosition(){
         var x = Math.round(Math.cos(theta[i]) * radius)
         var y = Math.round(Math.sin(theta[i]) * radius)
     
-        console.log(theta[i] + ' degrees')
-        console.log(circles[i])
-    
         var offset = circles[i].offsetHeight / 2
     
         circles[i].style.top = (centreX + x) - offset  + 'px'
@@ -28,4 +25,37 @@ function updateCirclePosition(){
 window.onresize = updateCirclePosition
 window.onload = updateCirclePosition
 
+
+var circles = document.getElementsByClassName('outerCircle')
+for(i = 0; i < circles.length; i++){
+    circles[i].onclick = (event) => {
+        // Swal.fire('Hello')
+        var target = event.target
+
+        var brand = target.dataset.brand
+        var shoeName = target.dataset.shoename
+        var price = target.dataset.price
+        var description = target.dataset.description
+        var shoeImageUrl = target.dataset.imageurl
+
+        console.log(shoeImageUrl)
+
+        var modalText = `
+            <h2 style='padding-bottom: 1rem;'>${shoeName}</h2>
+            <div style='padding-bottom: 1rem;'>${description}</div>
+            <h3>Price: ${price}</h3>
+        
+        `
+
+        Swal.fire({
+            title: brand.toUpperCase(),
+            html: modalText,
+            imageUrl: shoeImageUrl,
+            imageHeight: 300,
+            width: 1000,
+            footer:"If interested in buying, please DM me <a style='padding-left: 0.25rem;' href='https://www.instagram.com/creppluglc/' target='blank;'>@creppluglc</h1>"
+        })
+
+    }
+}
 
