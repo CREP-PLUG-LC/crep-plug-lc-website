@@ -25,6 +25,9 @@
     display: flex;
 
     border-radius: 50%;
+
+    opacity: 0;
+    animation: fadeIn 1.5s cubic-bezier(0.68, 0.1, 0.43, 1.11) forwards;
 }
 .mainLogo{
     border-radius: 50%;
@@ -38,13 +41,17 @@
     border: 1px solid #000;
     border-radius: 50%;
 
+    opacity: 0;
+    animation: fadeIn 1s cubic-bezier(0.68, 0.1, 0.43, 1.11) forwards;
+    animation-delay: calc(var(--order) * 100ms);
+
 }
 .outerCircleImage{
     height: 200px;
     width: 200px;
     object-fit: cover;
     border-radius: 50%;
-
+    
     pointer-events: none;
 }
 
@@ -55,4 +62,16 @@
     border: 1px solid #000;
     border-radius: 50%;
 
+}
+
+@keyframes fadeIn {
+    from{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+
+    }
 }
