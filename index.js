@@ -9,8 +9,7 @@ function updateCirclePosition(){
     var centreX = screen.offsetHeight / 2
     var centreY = screen.offsetWidth / 2
     
-    var radius = 600 / 2
-    
+    var radius = document.getElementById('middleCircle').offsetHeight
     
     for(i = 0; i < circles.length; i++){
         var x = Math.round(Math.cos(theta[i]) * radius)
