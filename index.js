@@ -29,8 +29,8 @@ window.onload = updateCirclePosition
 var circles = document.getElementsByClassName('outerCircle')
 for(i = 0; i < circles.length; i++){
     circles[i].onclick = (event) => {
-        // Swal.fire('Hello')
         var target = event.target
+
 
         var brand = target.dataset.brand
         var shoeName = target.dataset.shoename
@@ -38,24 +38,26 @@ for(i = 0; i < circles.length; i++){
         var description = target.dataset.description
         var shoeImageUrl = target.dataset.imageurl
 
-        console.log(shoeImageUrl)
+        var modal = document.getElementById('modal')
 
-        var modalText = `
-            <h2 style='padding-bottom: 1rem;'>${shoeName}</h2>
-            <div style='padding-bottom: 1rem;'>${description}</div>
-            <h3>Price: ${price}</h3>
-        
-        `
+        document.getElementById('modalImage').src = shoeImageUrl
+        document.getElementById('modalBrand').innerText = brand.toUpperCase()
+        document.getElementById('modalTitle').innerText = shoeName
+        document.getElementById('modalDescription').innerText = description
+        document.getElementById('modalPrice').innerText = price
 
-        Swal.fire({
-            title: brand.toUpperCase(),
-            html: modalText,
-            imageUrl: shoeImageUrl,
-            imageHeight: 300,
-            width: 1000,
-            footer:"If interested in buying, please DM me <a style='padding-left: 0.25rem;' href='https://www.instagram.com/creppluglc/' target='blank;'>@creppluglc</h1>"
-        })
+        document.getElementById('closeButton').onclick = () => {
+            modal.style.display = 'none'
+        }
 
+        modal.style.display = 'block'
     }
 }
 
+window.onclick = event => {
+    let modal = document.getElementById('modal')
+
+    if (event.target == modal){
+        modal.style.display = 'none'
+    }
+}
