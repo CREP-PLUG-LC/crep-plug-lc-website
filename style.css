@@ -141,6 +141,40 @@ body{
     padding-top: 0.5rem;
 }
 
+.footer{
+    position: absolute;
+    /* height: 200px; */
+    width: 100%;
+    bottom: 0%;
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+
+    color: #808080;
+    text-align: center;
+}
+.footer p{
+    float: right;
+    margin-right: 1rem;
+}
+a{
+    color: #808080;
+    text-decoration: none;
+}
+a:hover{
+
+    text-decoration: underline;
+}
+.footerButtonList{
+    display: flex;
+    flex-direction: row;
+    float: left;
+}
+.footerButtonList li {
+    list-style-type: none;
+    margin-right: 1rem;
+}
+
+
 
 @keyframes modalOpen {
     0% {
