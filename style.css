@@ -23,10 +23,21 @@ body{
 .circle{
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
-.middleCircle{
-    /* height: 300px;
-    width: 300px; */
+.content{
+    height: 80vh;
+    width: 80vh;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.currentPage{
+    opacity: 1;
+}
+.hiddenPage{
+    opacity: 0;
+}
+.middleCircle{
     height: 30vh;
     width: 30vh;
 
@@ -41,6 +52,24 @@ body{
 }
 .mainLogo{
     border-radius: 50%;
+}
+
+.slideButton{
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+
+    border-radius: 100%;
+    /* margin: auto; */
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.slideButton img{
+    color: #fff;
+}
+.slideButton:hover{
+    background-color: rgba(0, 0, 0, 0.3);
 }
 
 .outerCircle{
@@ -59,9 +88,7 @@ body{
     animation-delay: calc(var(--order) * 100ms);
 
 }
-.outerCircle:hover{
-    transform: scale(10);
-}
+
 .outerCircleImage{
     height: 20vh;
     width: 20vh;
@@ -69,16 +96,6 @@ body{
     border-radius: 50%;
     
     pointer-events: none;
-}
-
-
-.temp{
-    position: absolute;
-    height: 600px;
-    width: 600px;
-    border: 1px solid #000;
-    border-radius: 50%;
-
 }
 
 .modal{
@@ -180,8 +197,6 @@ a:hover{
     margin-right: 1rem;
 }
 
-
-
 @keyframes modalOpen {
     0% {
         transform: scale(.7);
@@ -208,6 +223,5 @@ a:hover{
     to{
         transform: translateY(0%);
         opacity: 1;
-
     }
 }
