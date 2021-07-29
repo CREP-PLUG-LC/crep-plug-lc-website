@@ -27,7 +27,6 @@ function updateCirclePosition(){
 window.onload = updateCirclePosition()
 
 
-
 // Set modal information for each shoe
 var circles = document.getElementsByClassName('outerCircle')
 for(i = 0; i < circles.length; i++){
