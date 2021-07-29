@@ -12,7 +12,7 @@
         "shoeBrand": "Nike",
         "shoeName": "Jordan 1 Mid Triple White GS",
         "shoeDescription": "A perfect shoe for the summer, triple white and super clean. The Air Jordan 1 Mid Shoe follows in the footsteps of greatness. The all-time classic design is updated with fresh colour pops and material combos to give it new identity.",
-        "shoePrice": "\u00a3100",
+        "shoePrice": "\u00a399",
         "animationOrder": 3
     },
     {
@@ -20,7 +20,7 @@
         "shoeBrand": "Nike",
         "shoeName": "Jordan 1 Mid Gym Red",
         "shoeDescription": "The Air Jordan 1 Mid Shoe is inspired by the first AJ1, offering fans of Jordan retros a chance to follow in the footsteps of greatness.Fresh colour trims the clean, classic materials, injecting some newness into the familiar design.",
-        "shoePrice": "\u00a3150",
+        "shoePrice": "\u00a3159",
         "animationOrder": 2
     },
     {
@@ -43,7 +43,7 @@
         "shoeImage": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRwtPFarMl-6QVLSWXYySQ5QxOMibyOdsG0B_n1sDtR2vh_Cpv1HryuqUT4DKCgOmJU67n3U0TElJM&usqp=CAc",
         "shoeBrand": "Nike",
         "shoeName": "Dunk Low UNC Mens + GS",
-        "shoeDescription": "Possibly the dunk of the year? It's definitely up there! The dunk low University Blue features a super clean blue and white design perfect for any outfit and occasion.",
+        "shoeDescription": "Nodding to the University of North Carolina Tarheels, the Nike Dunk Low UNC is constructed of a white leather upper with University Blue overlays and Swooshes. From there, a white and University woven Nike tongue label completes the design.",
         "shoePrice": "\u00a3295",
         "animationOrder": 3
     }
