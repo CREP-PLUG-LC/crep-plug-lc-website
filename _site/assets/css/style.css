@@ -30,12 +30,15 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+
+    pointer-events: none;
 }
 .currentPage{
     opacity: 1;
 }
 .hiddenPage{
     opacity: 0;
+    pointer-events: none;
 }
 .middleCircle{
     height: 30vh;
@@ -71,7 +74,10 @@ body{
 .slideButton:hover{
     background-color: rgba(0, 0, 0, 0.3);
 }
-
+.disabled{
+    pointer-events: none;
+    opacity: 0.2;
+}
 .outerCircle{
     position: absolute;
     /* height: 200px;
@@ -84,10 +90,16 @@ body{
     border-radius: 50%;
 
     opacity: 0;
-    animation: fadeIn 1s cubic-bezier(0.68, 0.1, 0.43, 1.11) forwards;
+    /* animation: fadeIn 1s cubic-bezier(0.68, 0.1, 0.43, 1.11) forwards; */
+    
+    animation-name: fadeIn;
+    animation-duration: 1s;
+    animation-timing-function: cubic-bezier(0.68, 0.1, 0.43, 1.11);
+    animation-fill-mode: forwards;
     animation-delay: calc(var(--order) * 100ms);
 
 }
+
 
 .outerCircleImage{
     height: 20vh;
@@ -96,6 +108,16 @@ body{
     border-radius: 50%;
     
     pointer-events: none;
+}
+@keyframes fadeIn {
+    from{
+        transform: translateY(50%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0%);
+        opacity: 1;
+    }
 }
 
 .modal{
@@ -111,19 +133,30 @@ body{
 }
 
 .modalContainer{
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: fit-content;
+
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    position: relative;
+
+    top: 50%;
+    transform: translateY(-50%);
     
-    pointer-events: none;
+    /* pointer-events: none; */
     
 }
 .modalContent{
     background-color: #fefefe;
-    width: 50%;
+    width: 100%;
     padding: 1rem;
     text-align: center;
 
@@ -155,48 +188,24 @@ body{
     background-color: #7367f0;
     color: #fff;
     font-weight: 700;
-
+    
     align-self: center;
+    
+    cursor: pointer;
 }
 
 .modalFooter{
     border-top: 1px solid #000;
     padding-top: 0.5rem;
 }
-
-.footer{
-    position: absolute;
-    /* height: 200px; */
-    width: 100%;
-    bottom: 0%;
-    margin-bottom: .5rem;
-    margin-left: 1rem;
-
-    color: #808080;
-    text-align: center;
-}
-.footer p{
-    float: right;
-    margin-right: 1.5rem;
-}
-a{
-    color: #808080;
-    text-decoration: none;
-}
-a:hover{
-
+.modalFooter a{
+    color: #000;
     text-decoration: underline;
 }
-.footerButtonList{
-    display: flex;
-    flex-direction: row;
-    float: left;
+.modalFooter a:hover{
+    cursor: pointer;
+    text-decoration: none;
 }
-.footerButtonList li {
-    list-style-type: none;
-    margin-right: 1rem;
-}
-
 @keyframes modalOpen {
     0% {
         transform: scale(.7);
@@ -215,13 +224,36 @@ a:hover{
     }
 }
 
-@keyframes fadeIn {
-    from{
-        transform: translateY(50%);
-        opacity: 0;
-    }
-    to{
-        transform: translateY(0%);
-        opacity: 1;
-    }
+.footer{
+    position: absolute;
+    /* height: 200px; */
+    width: 100%;
+    bottom: 0%;
+    margin-bottom: .5rem;
+    margin-left: 1rem;
+    
+    color: #808080;
+    text-align: center;
 }
+.footer p{
+    float: right;
+    margin-right: 1.5rem;
+}
+a{
+    color: #808080;
+    text-decoration: none;
+}
+a:hover{
+    
+    text-decoration: underline;
+}
+.footerButtonList{
+    display: flex;
+    flex-direction: row;
+    float: left;
+}
+.footerButtonList li {
+    list-style-type: none;
+    margin-right: 1rem;
+}
+

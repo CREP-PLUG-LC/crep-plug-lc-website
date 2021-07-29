@@ -26,6 +26,7 @@ function updateCirclePosition(){
 // window.onresize = updateCirclePosition()
 window.onload = updateCirclePosition()
 
+
 // Set modal information for each shoe
 var circles = document.getElementsByClassName('outerCircle')
 for(i = 0; i < circles.length; i++){
@@ -73,7 +74,7 @@ var pageOrder = ['leftPage', 'mainPage', 'rightPage']
 function scrollPage(direction){    
     let currentPage = document.querySelector('.currentPage')
     
-    // Get current index of page 
+    // Get index of current page 
     let currentPageIndex = 0
     for(i = 0; i < pageOrder.length; i++){
         if(currentPage.classList.contains(pageOrder[i])){
@@ -81,6 +82,7 @@ function scrollPage(direction){
         }
     }
 
+    // Get the index of the page to scroll to
     pageIndexToScrollTo = -1
 
     if(direction === "left"){
@@ -94,6 +96,7 @@ function scrollPage(direction){
         }
     }
 
+    // Change to the page to scroll to
     if(pageIndexToScrollTo !== -1){
         currentPage.classList.remove('currentPage')
         currentPage.classList.add('hiddenPage')
@@ -104,6 +107,18 @@ function scrollPage(direction){
         pageToScrollTo.classList.add('currentPage')
         updateCirclePosition()
     }
+
+    if(pageIndexToScrollTo === 0){
+        leftButton.classList.add('disabled')
+    }
+    else if(pageIndexToScrollTo === 2){
+        rightButton.classList.add('disabled')
+    }
+    else{
+        leftButton.classList.remove('disabled')
+        rightButton.classList.remove('disabled')
+    }
+
 }
 
 leftButton.onclick = () => {

@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crep Plug LC</title>
+
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body onresize="updateCirclePosition()">
+    <div class="screen" id="screen">
+
+        <div id="leftButton" class="slideButton">
+            <img src="./assets/images/chevron-left.svg" alt="" srcset="">
+        </div>
+        <div class="content">
+            <div class="middleCircle circle" id="middleCircle">
+                <img src="./assets/images/CREPPLUGLC.png" alt="" class='mainLogo'>
+            </div>
+        </div>
+        <div id="rightButton" class="slideButton">
+            <img src="./assets/images/chevron-right.svg" alt="" srcset="">
+        </div>
+
+        <div class="mainPage currentPage">
+            
+                <div class="outerCircle circle" style="--order: 4" data-brand='Nike' data-shoeName='Jordan 1 Mid Wolf Grey (W)' data-imageUrl='https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8d3fcb92-4158-4369-a12c-246bd6e9e89c/air-jordan-1-mid-shoe-dLm8Nj.png' data-price="£185" data-description="A white leather base, complete with all those core details like a perforated toe box, comes pared with greyish-silver overlays for an icy vibe. A premium suede Nike Swoosh is added on both sides in a cool blue hue, giving the shoe a third hue that perfectly complements the translucent rubber outsole. While laces come white to keep things fresh, iconic branding can be spotted via the Jumpman logo on the tongue embroidered in grey, and the Wings logo on the ankle flap in white. Rounding off this super-slick design, the midsole comes fresh again in white, to create a desirable finish that we're sure will be as popular as ever.">
+                    <img class="outerCircleImage" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/8d3fcb92-4158-4369-a12c-246bd6e9e89c/air-jordan-1-mid-shoe-dLm8Nj.png">
+                </div>
+            
+                <div class="outerCircle circle" style="--order: 3" data-brand='Nike' data-shoeName='Jordan 1 Mid Triple White GS' data-imageUrl='https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-2dfd2b5f-976c-414b-8b34-9cb61397449a/air-jordan-1-mid-older-shoes-xvqm9H.png' data-price="£100" data-description="A perfect shoe for the summer, triple white and super clean. The Air Jordan 1 Mid Shoe follows in the footsteps of greatness. The all-time classic design is updated with fresh colour pops and material combos to give it new identity.">
+                    <img class="outerCircleImage" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/i1-2dfd2b5f-976c-414b-8b34-9cb61397449a/air-jordan-1-mid-older-shoes-xvqm9H.png">
+                </div>
+            
+                <div class="outerCircle circle" style="--order: 2" data-brand='Nike' data-shoeName='Jordan 1 Mid Gym Red' data-imageUrl='https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bf3b25ba-719c-4326-a6b5-e44f593a7579/air-jordan-1-mid-shoes-N1GfGx.png' data-price="£150" data-description="The Air Jordan 1 Mid Shoe is inspired by the first AJ1, offering fans of Jordan retros a chance to follow in the footsteps of greatness.Fresh colour trims the clean, classic materials, injecting some newness into the familiar design.">
+                    <img class="outerCircleImage" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/bf3b25ba-719c-4326-a6b5-e44f593a7579/air-jordan-1-mid-shoes-N1GfGx.png">
+                </div>
+            
+                <div class="outerCircle circle" style="--order: 1" data-brand='Nike' data-shoeName='Jordan 4 Oreo' data-imageUrl='https://cdn.shopify.com/s/files/1/0255/9429/8467/products/air-jordan-4-retro-white-oreo-2021-CT8527-100_1_baglce_1800x1800.jpg?v=1625666565' data-price="£300" data-description="Possibly the best Jordan 4 release of the year! With such a clean colourway you really can't go wrong with this pair.">
+                    <img class="outerCircleImage" src="https://cdn.shopify.com/s/files/1/0255/9429/8467/products/air-jordan-4-retro-white-oreo-2021-CT8527-100_1_baglce_1800x1800.jpg?v=1625666565">
+                </div>
+            
+                <div class="outerCircle circle" style="--order: 2" data-brand='Nike' data-shoeName='Jordan 1 Mid Racer Blue GS' data-imageUrl='https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f13400be-a5f9-4bca-ad18-9e9e3e08cae4/air-jordan-1-mid-older-shoes-1Dfw4K.png' data-price="£95" data-description="The Jordan 1 Mid Racer Blue features black and white leather around the main body of the shoe with hints of blue nubuck for the swoosh and the ankle. This makes it a very comfortable and extremely stylish shoe perfect for anyone who wants a pair of beginner Jordan 1’s">
+                    <img class="outerCircleImage" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/f13400be-a5f9-4bca-ad18-9e9e3e08cae4/air-jordan-1-mid-older-shoes-1Dfw4K.png">
+                </div>
+            
+                <div class="outerCircle circle" style="--order: 3" data-brand='Nike' data-shoeName='Dunk Low UNC Mens + GS' data-imageUrl='https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRwtPFarMl-6QVLSWXYySQ5QxOMibyOdsG0B_n1sDtR2vh_Cpv1HryuqUT4DKCgOmJU67n3U0TElJM&usqp=CAc' data-price="£295" data-description="Possibly the dunk of the year? It's definitely up there! The dunk low University Blue features a super clean blue and white design perfect for any outfit and occasion.">
+                    <img class="outerCircleImage" src="https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcRwtPFarMl-6QVLSWXYySQ5QxOMibyOdsG0B_n1sDtR2vh_Cpv1HryuqUT4DKCgOmJU67n3U0TElJM&usqp=CAc">
+                </div>
+            
+        </div>
+        
+        <div class="rightPage hiddenPage" id="">
+            
+                <div class="outerCircle circle" style="--order: " data-brand='Nike' data-shoeName='Jordan 1 Mid Banned GS' data-imageUrl='https://cdn.shopify.com/s/files/1/0255/9429/8467/products/air-jordan-1-mid-banned-2020-gs-554725-074_1_pdsa9n_1800x1800.jpg?v=1605978915' data-price="£100" data-description="Size 3.5, 5 and 6 in stock now!">
+                    <img class="outerCircleImage" src="https://cdn.shopify.com/s/files/1/0255/9429/8467/products/air-jordan-1-mid-banned-2020-gs-554725-074_1_pdsa9n_1800x1800.jpg?v=1605978915">
+                </div>
+            
+                <div class="outerCircle circle" style="--order: " data-brand='Yeezy' data-shoeName='Yeezy 350 Bred' data-imageUrl='https://cdn.shopify.com/s/files/1/0255/9429/8467/products/adidas-originals-yeezy-boost-350-v2-core-blackred_1_1000x1000.jpg?v=1598893477' data-price="£350" data-description="All sizes can be sourced upon request.">
+                    <img class="outerCircleImage" src="https://cdn.shopify.com/s/files/1/0255/9429/8467/products/adidas-originals-yeezy-boost-350-v2-core-blackred_1_1000x1000.jpg?v=1598893477">
+                </div>
+            
+                <div class="outerCircle circle" style="--order: " data-brand='Nike' data-shoeName='Jordan 1 Low Silver Toe GS' data-imageUrl='https://cdn.shopify.com/s/files/1/0255/9429/8467/products/air-jordan-1-low-black-white-grey-gs-553560-040_1_ccpljx_1800x1800.jpg?v=1625488177' data-price="£95" data-description="Sizes can be sourced upon request for under £100">
+                    <img class="outerCircleImage" src="https://cdn.shopify.com/s/files/1/0255/9429/8467/products/air-jordan-1-low-black-white-grey-gs-553560-040_1_ccpljx_1800x1800.jpg?v=1625488177">
+                </div>
+            
+                <div class="outerCircle circle" style="--order: " data-brand='Nike' data-shoeName='Jordan 1 Low Wolf Grey (W)' data-imageUrl='https://cdn.shopify.com/s/files/1/0255/9429/8467/products/air-jordan-1-low-aluminium-wolf-grey-w-dc0774-105_1_cogkup_1800x1800.png?v=1626439742' data-price="£169" data-description="Being one of the cleanest Jordan 1 lows to release this year, the Jordan 1 Wolf Grey is a big cop!">
+                    <img class="outerCircleImage" src="https://cdn.shopify.com/s/files/1/0255/9429/8467/products/air-jordan-1-low-aluminium-wolf-grey-w-dc0774-105_1_cogkup_1800x1800.png?v=1626439742">
+                </div>
+            
+                <div class="outerCircle circle" style="--order: " data-brand='Nike' data-shoeName='Dunk Low Cobalt Blue' data-imageUrl='https://cdn.shopify.com/s/files/1/0255/9429/8467/products/nike-dunk-low-hyper-cobalt-dd1391-001_1_e3apmk_1800x1800.jpg?v=1613987473' data-price="£150" data-description="The Dunk Low Cobalt Blue is extremely similar to the OG retro 1985 colourway with two-tone colour blocking and a neat white insole.">
+                    <img class="outerCircleImage" src="https://cdn.shopify.com/s/files/1/0255/9429/8467/products/nike-dunk-low-hyper-cobalt-dd1391-001_1_e3apmk_1800x1800.jpg?v=1613987473">
+                </div>
+            
+                <div class="outerCircle circle" style="--order: " data-brand='Nike' data-shoeName='Dunk Low UNLV' data-imageUrl='https://cdn.shopify.com/s/files/1/0255/9429/8467/products/nike-dunk-low-retro-gs-unlv-cw1590-002_1_x7xwfm_1800x1800.jpg?v=1613046383' data-price="£175" data-description="Another retro remake the Dunk low unlv replicates the OG 1985 'Be True To Your School' series. The two-tone leather upper is finished in the signature hues of the University of Nevada, Las Vegas, featuring contrasting red overlays.">
+                    <img class="outerCircleImage" src="https://cdn.shopify.com/s/files/1/0255/9429/8467/products/nike-dunk-low-retro-gs-unlv-cw1590-002_1_x7xwfm_1800x1800.jpg?v=1613046383">
+                </div>
+            
+        </div>
+
+        <div class="leftPage hiddenPage" id="">
+            
+                <div class="outerCircle circle" data-brand='Nike' data-shoeName='Dunk Low University Red' data-imageUrl='https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6622dfa2-3052-4891-bd7d-660bfdc8a600/dunk-low-retro-shoe-RdT53Q.png' data-price="£150" data-description="Created for the hardwood but taken to the streets, the Nike Dunk Low Retro returns with crisp overlays and original team colours. This basketball icon channels '80s vibes with premium leather in the upper that looks good and breaks in even better. Modern footwear technology helps bring the comfort into the 21st century.">
+                    <img class="outerCircleImage" src="https://static.nike.com/a/images/c_limit,w_592,f_auto/t_product_v1/6622dfa2-3052-4891-bd7d-660bfdc8a600/dunk-low-retro-shoe-RdT53Q.png">
+                </div>
+            
+                <div class="outerCircle circle" data-brand='Yeezy' data-shoeName='Yeezy Slides' data-imageUrl='https://cdn.shopify.com/s/files/1/0255/9429/8467/products/yeezy-slide-pure-gz5554_1_xkxpxe_1800x1800.jpg?v=1624542447' data-price="£220" data-description="The yeezy summer slides are here! Cop Now!">
+                    <img class="outerCircleImage" src="https://cdn.shopify.com/s/files/1/0255/9429/8467/products/yeezy-slide-pure-gz5554_1_xkxpxe_1800x1800.jpg?v=1624542447">
+                </div>
+            
+                <div class="outerCircle circle" data-brand='Nike' data-shoeName='Dunk low Laser Orange' data-imageUrl='https://cdn.shopify.com/s/files/1/0255/9429/8467/products/nike-dunk-low-laser-orange-dd1503-800_1_phgtp1_1800x1800.jpg?v=1621674991' data-price="£215" data-description="This offering of the Nike Dunk Low returns in a traditional two-tone color blocking featuring a White leather base with Laser Orange overlays. White also appears on the nylon tongues, “NIKE” heel and insole branding and midsole, while Laser Orange laces, inner lining, insoles and rubber outsole completes the design.">
+                    <img class="outerCircleImage" src="https://cdn.shopify.com/s/files/1/0255/9429/8467/products/nike-dunk-low-laser-orange-dd1503-800_1_phgtp1_1800x1800.jpg?v=1621674991">
+                </div>
+            
+                <div class="outerCircle circle" data-brand='Nike' data-shoeName='Dunk Low Panda (Black & White)' data-imageUrl='https://cdn.shopify.com/s/files/1/0255/9429/8467/products/nike-dunk-low-w-dd1503-101-white-black_1_aszkyq_1800x1800.jpg?v=1619684914' data-price="£220" data-description="A classic, clean retro dunk colourway.">
+                    <img class="outerCircleImage" src="https://cdn.shopify.com/s/files/1/0255/9429/8467/products/nike-dunk-low-w-dd1503-101-white-black_1_aszkyq_1800x1800.jpg?v=1619684914">
+                </div>
+            
+                <div class="outerCircle circle" data-brand='Nike' data-shoeName='Jordan 4 University Blue' data-imageUrl='https://cdn.shopify.com/s/files/1/0255/9429/8467/products/air-jordan-4-university-blue-CT8527-400_1_1800x1800.jpg?v=1619521823' data-price="£300" data-description="Whenever a Jordan silhouette features the legendary UNC blue colourway, you know that sneaker will become a classic. This time around, we see the iconic blue hue grace the Air Jordan 4. The uppers are entirely wrapped in the legendary powder blue colour, ensuring that you know this is a UNC Air Jordan.">
+                    <img class="outerCircleImage" src="https://cdn.shopify.com/s/files/1/0255/9429/8467/products/air-jordan-4-university-blue-CT8527-400_1_1800x1800.jpg?v=1619521823">
+                </div>
+            
+                <div class="outerCircle circle" data-brand='Nike' data-shoeName='Jordan 1 Low Crimson Tint GS' data-imageUrl='https://cdn.shopify.com/s/files/1/0255/9429/8467/products/air-jordan-1-low-crimson-tint-gs-553560-034_1_l57jze_1800x1800.jpg?v=1621958620' data-price="£85" data-description="Size 5 in stock Now for RETAIL price. DM fast!">
+                    <img class="outerCircleImage" src="https://cdn.shopify.com/s/files/1/0255/9429/8467/products/air-jordan-1-low-crimson-tint-gs-553560-034_1_l57jze_1800x1800.jpg?v=1621958620">
+                </div>
+            
+        </div>
+
+        <div class="footer">
+            <ul class="footerButtonList">
+                <li><a href="#">SHIPPING POLICY</a></li>
+                <li><a href="#">REFUND POLICY</a></li>
+                <li><a href="#">SOURCING PRODUCTS</a></li>
+            </ul>
+            <p>Created By <a href="https://www.instagram.com/creppluglc/?hl=en" target="blank;">@creppluglc</a></p>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modalContainer">
+            <div class="modalContent">
+                <img id="modalImage" class="modalImage modalItem" src="" alt="">
+                <h1 id="modalBrand" class="modalBrand modalItem"></h1>
+                <h2 id="modalTitle" class="modalTitle modalItem"></h2>
+                <p id="modalDescription" class="modalDescription modalItem"></p>
+                <h2 id="modalPrice" class="modalPrice modalItem"></h2>
+                <button id="closeButton" class="closeButton modalItem">OK</button>
+
+                <div class="modalFooter">
+                    If interested in buying, please DM me <a href='https://www.instagram.com/creppluglc/' target='blank;'>@creppluglc</a></h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/js/index.js"></script>
+</body>
+</html>
