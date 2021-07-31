@@ -19,6 +19,8 @@ body{
     flex-wrap: nowrap;
 
     background-color: var(--background-colour);
+
+    position: fixed;
 }
 .container{
     text-align: center;
@@ -107,11 +109,9 @@ body{
     cursor: pointer;
     transform: scale(1.5);
 }
-
-
 .outerCircleImage{
-    height: 20vh;
-    width: 20vh;
+    height: 100%;
+    width: 100%;
     object-fit: cover;
     border-radius: 50%;
     

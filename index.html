@@ -7,7 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crep Plug LC</title>
 
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" media="screen and (min-width: 901px)" href="assets/css/desktopStyle.css">
+    <link rel="stylesheet" media="screen and (max-width: 900px)" href="assets/css/mobileStyle.css">
 </head>
 <body onresize="updateCirclePosition()">
     <div class="screen" id="screen">
@@ -16,7 +17,7 @@
             <img src="./assets/images/chevron-left.svg" alt="" srcset="">
         </div>
         <div class="content">
-            <div class="middleCircle circle" id="middleCircle">
+            <div class="middleCircle circle banner" id="middleCircle">
                 <img src="./assets/images/CREPPLUGLC.png" alt="" class='mainLogo'>
             </div>
         </div>
@@ -50,11 +51,19 @@
 
         <div class="footer">
             <ul class="footerButtonList">
-                <li><a href="./shippingPolicy.html">SHIPPING POLICY</a></li>
-                <li><a href="./refundPolicy.html">REFUND POLICY</a></li>
-                <li><a href="./sourcingProducts.html">SOURCING PRODUCTS</a></li>
+                <li>
+                    <a href="./shippingPolicy.html">SHIPPING POLICY</a>
+                </li>
+                <li>
+                    <a href="./refundPolicy.html">REFUND POLICY</a>
+                </li>
+                <li>
+                    <a href="./sourcingProducts.html">SOURCING PRODUCTS</a>
+                </li>
             </ul>
-            <p>© Created By <a href="https://www.instagram.com/creppluglc/?hl=en" target="blank;">@creppluglc</a></p>
+            <div class="copyright">
+                <div>© Created By <a href="https://www.instagram.com/creppluglc/?hl=en" target="blank;">@creppluglc</a></div>
+            </div>
         </div>
     </div>
 

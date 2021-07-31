@@ -33,7 +33,6 @@ for(i = 0; i < circles.length; i++){
     circles[i].onclick = (event) => {
         var target = event.target
 
-
         var brand = target.dataset.brand
         var shoeName = target.dataset.shoename
         var price = target.dataset.price
@@ -50,9 +49,11 @@ for(i = 0; i < circles.length; i++){
 
         document.getElementById('closeButton').onclick = () => {
             modal.style.display = 'none'
+            document.body.classList.remove('noScroll')
         }
 
         modal.style.display = 'block'
+        document.body.classList.add('noScroll')
     }
 }
 
@@ -62,6 +63,7 @@ window.onclick = event => {
 
     if (event.target == modal){
         modal.style.display = 'none'
+        document.body.classList.remove('noScroll')
     }
 }
 
