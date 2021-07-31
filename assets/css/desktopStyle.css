@@ -243,7 +243,7 @@ body{
     color: #808080;
     text-align: center;
 }
-.footer p{
+.copyright{
     float: right;
     margin-right: 1.5rem;
 }
@@ -252,7 +252,6 @@ a{
     text-decoration: none;
 }
 a:hover{
-    
     text-decoration: underline;
 }
 .footerButtonList{
@@ -264,4 +263,3 @@ a:hover{
     list-style-type: none;
     margin-right: 1rem;
 }
-
